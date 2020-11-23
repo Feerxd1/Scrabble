@@ -1,0 +1,32 @@
+# Creas un diccionario con valor a cada letra
+score = {"a": 1 , "b": 3 , "c": 3 ,"ch": 5 ,
+         "d": 2 , "e": 1 , "f": 4 , "g": 2 ,
+         "h": 4 , "i": 1 , "j": 8 , "k": 5 ,
+         "l": 1 , "ll": 8 ,"m": 3 , "n": 1 ,
+         "o": 1 , "p": 3 ,"q": 10, "r": 1 ,
+         "rr": 8, "s": 1 , "t": 1 ,"u": 1 , 
+         "v": 4 , "w": 4 , "x": 8 ,"y": 4 ,
+         "z": 10, "?":0 }
+
+# Crea la funcion para el codigo
+def scrabble_score(word):
+
+# define el puntaje inicial como 5
+    total = 0;
+
+# cuenta cada letra en la palabra
+    for i in word:
+
+# Cambia las tetras por minusculas (por paja agregar mayusculas)
+        i = i.lower(); 
+
+# Agrega puntaje a cada letra y crea un total
+        total = total + score[i];
+    return total;
+
+# Te premite agregar una palabra
+your_word = input("El puntaje de tu palabra es : ");
+
+# Imprime el puntaje
+print(scrabble_score(your_word));
+print("Tu palabra era : ",(your_word));
